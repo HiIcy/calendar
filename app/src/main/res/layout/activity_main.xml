@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Main_layout"
+    tools:context="com.example.anyiqu.calendar.MainActivity"
+    android:weightSum="1"
+    android:divider="#ff23"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    android:dividerPadding="1dp">
+
+    <LinearLayout
+        style="@style/style_calendar_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/Setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/img_options_menu"
+            android:clickable="true" />
+
+        <ImageButton
+            android:id="@+id/view_month"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="220dp"
+            android:background="@drawable/view_month"
+            android:clickable="true" />
+
+        <ImageButton
+            android:id="@+id/view_week"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/view_week"
+            android:clickable="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="386dp"
+
+            app:mcv_allowClickDaysOutsideCurrentMonth="true"
+            app:mcv_arrowColor="#eebf93f5"
+            app:mcv_calendarMode="month"
+            app:mcv_dateTextAppearance="@style/style_calendar_header_container"
+            app:mcv_headerTextAppearance="?android:attr/textAppearanceMedium"
+            app:mcv_selectionColor="#e6a4a4"
+            app:mcv_weekDayTextAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#9becc1c1"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_marginTop="17dp"
+        android:weightSum="1">
+        <ImageButton
+            android:id="@+id/event_schedules_view"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/img_schedule" />
+
+        <ImageButton
+            android:id="@+id/add_new_event"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="170dp"
+            android:layout_weight="0.03"
+            android:background="@drawable/img_add_task" />
+    </LinearLayout>
+</LinearLayout>

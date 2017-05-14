@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/redit_event_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/redit_cancle" />
+
+            <TextView
+                android:id="@+id/event_add_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="编辑事件"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:id="@+id/redit_event_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/redit_confirm" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/Event_title_redit"
+                style="@style/style_event_text"
+                android:background="#369f"
+                android:hint="例如，明天下午四点打球" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp">
+
+            <EditText
+                android:id="@+id/Event_location_redit"
+                style="@style/style_event_text"
+                android:layout_marginLeft="17dp"
+                android:hint="地点" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <EditText
+                    android:id="@+id/Event_clock_redit"
+                    style="@style/style_event_text"
+                    android:layout_marginLeft="17dp"
+                    android:hint="时间"
+                    android:editable="false"
+                    android:cursorVisible="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/start_event_redit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp"
+                    android:text="开始"
+                    android:textSize="20dp"
+                    android:textColor="#556B2F"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:cursorVisible="false" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/end_event_redit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="43dp"
+                    android:text="结束"
+                    android:textColor="#556B2F"
+                    android:textSize="20dp"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:cursorVisible="false"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="3dp">
+                <ImageView
+                    android:id="@+id/redit_event_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/img_event_remind" />
+                <EditText
+                    android:id="@+id/Event_remind_redit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#c17045d6"
+                    android:clickable="true"
+                    android:editable="false"
+                    android:cursorVisible="false"
+                    android:layout_marginLeft="12dp"
+                    android:hint="提醒" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

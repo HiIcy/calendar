@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true">&lt;!&ndash;vertical就是在垂直方向上一排排放组件&ndash;&gt;-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#ffffff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_gravity="bottom"
+                    android:id="@+id/editText_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#BBFFFF"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:gravity="center_horizontal"
+                    android:textSize="25dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:endYear="2020"
+                    android:startYear="1990">
+
+                </DatePicker>
+
+                <TimePicker
+                    android:id="@+id/time_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    android:timePickerMode="spinner">
+
+                </TimePicker>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#BBFFFF"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/select_date_cancle"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="#FAF0E6"
+                    android:text="取消" />
+
+                <Button
+                    android:id="@+id/select_date_confirm"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="160dp"
+                    android:background="#FAF0E6"
+                    android:text="确定" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

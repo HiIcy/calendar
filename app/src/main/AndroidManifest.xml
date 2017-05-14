@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.anyiqu.calendar">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="岁墨"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+        <uses-feature android:name="android.hardware.camera" />
+        <uses-feature android:name="android.hardware.camera.autofocus" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+        <uses-permission android:name="android.permission.VIBRATE" /><!--手机震动权限-->
+
+        <activity android:name=".module.launch_face">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".event_detail"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <!--根据action的名字启动这个activity-->
+                <action android:name="com.example.anyiqu.calendar.DETAIL"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--要实现页面间跳转，需要注册在 .xml-->
+        <activity android:name=".add_new_event">
+        </activity>
+        <activity android:name=".event_schedules_view">
+        </activity>
+        <activity android:name=".Redit_event">
+        </activity>
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <service
+            android:name=".notification.NotificationService"
+            android:enabled="true"
+            android:exported="true"
+            android:persistent="true"
+            android:priority="1000">
+        </service>
+        <receiver android:name=".notification.AlarmReceiver">
+        </receiver>
+        <receiver android:name=".notification.BootReceiver"
+            android:enabled="true" android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"> >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.anyiqu.calendar.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+    </application>
+</manifest>
